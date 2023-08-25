@@ -1,0 +1,54 @@
+
+
+.ham-menu{
+  display: none;
+}
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-options {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.nav-options:hover {
+  background-color: rgb(176, 176, 182);
+}
+@media screen and (max-width: 800px) {
+  .right-side {
+    display: none;
+  }
+
+  .ham-menu {
+    display: block;
+  }
+
+  .menu-nav.open {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .menu-nav.open.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+
+
+}
+
+
